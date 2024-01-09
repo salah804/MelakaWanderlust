@@ -1,3 +1,4 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:melaka_wanderlust/firebase/auth.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,9 @@ import 'package:melaka_wanderlust/pages/login_register.dart';
 import 'package:melaka_wanderlust/models/wishlist.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
+import 'package:melaka_wanderlust/pages/travel_tips.dart';
+import 'firebase_options.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
