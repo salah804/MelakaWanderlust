@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class TravelTipsScreen extends StatelessWidget {
+class TravelTipsScreenMalay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,42 +15,42 @@ class TravelTipsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              SectionTitle(title: 'Pack Smartly', textColor: Colors.indigo),
+              SectionTitle(title: '	Pek dengan bijak', textColor: Colors.indigo),
               TipsItemWithVideo(
-                tip: '1. How To Pack Light For A Long Trip.',
-                videoUrl: 'https://www.youtube.com/watch?v=Eqc4A3J5rWg&t=12s ',
+                tip: '1. TIGA CARA MUDAH PACK BAJU UNTUK TRAVEL.',
+                videoUrl: 'https://www.youtube.com/watch?v=ZB_qbgrI3Ok ',
                 textColor: Colors.black,
               ),
 
               TipsItemWithVideo(
-                tip: '2. Don\'t forget essential items like chargers, medications, and toiletries.',
-                videoUrl: 'https://www.youtube.com/watch?v=KNhLjhjZj3w',
+                tip: '2. Barang Wajib Bawa Masa Travel | Macam Mana.',
+                videoUrl: 'https://www.youtube.com/watch?v=oFPBGjdycyc   ',
                 textColor: Colors.black,
               ),
 
               // Add similar sections for 'Stay Safe', 'Travel on a Budget', and 'Make the Most of Your Trip'
 
-              SectionTitle(title: 'Stay Safe', textColor: Colors.indigo),
+              SectionTitle(title: 'cara berhati-hati ketika berlancong ', textColor: Colors.indigo),
               TipsItemWithVideo(
-                tip: '1. How to Keep Valuables Safe While Traveling.',
-                videoUrl: 'https://www.youtube.com/watch?v=sTJg5EsDdQE',
+                tip: '1. TIPS KESELAMATAN KETIKA TRAVEL.',
+                videoUrl: 'https://www.youtube.com/watch?v=AOYjZbditso  ',
                 textColor: Colors.black,
               ),
               TipsItemWithVideo(
-                tip: '2. How Can I Stay Safe When Travelling Alone? | Solo Travel Safety Tips.',
-                videoUrl: 'https://www.youtube.com/watch?v=tG-TD4iVhag ',
+                tip: '2. Travel Tips ✈️: 12 First Time Traveller Perlu Tahu!.',
+                videoUrl: '	https://www.youtube.com/watch?v=LE_78MM_bTE ',
                 textColor: Colors.black,
               ),
 
-              SectionTitle(title: 'Travel on a Budget', textColor: Colors.indigo),
+              SectionTitle(title: 'melancong dengan budjet murah', textColor: Colors.indigo),
               TipsItemWithVideo(
-                tip: '1. Top 10 Budget Hotels in Melaka.',
-                videoUrl: 'https://www.youtube.com/watch?v=88CwmwmQAxY',
+                tip: '1. Kaki Travel Share Rahsia Travel Murah.',
+                videoUrl: '	https://www.youtube.com/watch?v=HaGow71PzrI ',
                 textColor: Colors.black,
               ),
               TipsItemWithVideo(
-                tip: '2. Take advantage of free or low-cost activities and attractions.',
-                videoUrl: 'https://www.youtube.com/watch?v=VBgA73L9aR4',
+                tip: '2.  || Bagaimana Melancong dengan Bajet yang Kecil?? Tips and Tricks.',
+                videoUrl: 'https://www.youtube.com/watch?v=lekQ-UPVoMI',
                 textColor: Colors.black,
               ),
 

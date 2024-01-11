@@ -6,6 +6,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:melaka_wanderlust/pages/login.dart';
 import 'package:melaka_wanderlust/pages/login_register.dart';
 import 'package:melaka_wanderlust/models/wishlist.dart';
+import 'package:melaka_wanderlust/pages/promotion.dart';
+import 'package:melaka_wanderlust/pages/tips_and_advice.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'package:melaka_wanderlust/pages/travel_tips.dart';
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
+
     );
   }
 }

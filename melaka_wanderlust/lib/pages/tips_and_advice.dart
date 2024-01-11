@@ -1,10 +1,11 @@
-// tips_and_advice_screen.dart
+// TipsAndAdviceScreen.dart
 import 'package:flutter/material.dart';
 import 'package:melaka_wanderlust/pages/local_advice.dart';
+import 'package:melaka_wanderlust/pages/local_advice_malay.dart';
 import 'package:melaka_wanderlust/pages/profile.dart';
+import 'package:melaka_wanderlust/pages/tarvel_tips_malay.dart';
 import 'package:melaka_wanderlust/pages/travel_tips.dart';
-import 'package:melaka_wanderlust/pages/wishlist.dart';
-
+import 'package:melaka_wanderlust/pages/promotion.dart';
 import '../components/nav_bar.dart';
 import 'home.dart';
 
@@ -14,22 +15,22 @@ class TipsAndAdviceScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Tips and Advice'),
+        title: Text('Tips and advice '),
         backgroundColor: Colors.orange,
       ),
       body: Column(
         children: [
           ListTile(
-            title: Text('Travel Tips'),
+            title: Text('Travel Tips (English)'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TravelTipsScreen()), // Correct the navigation
+                MaterialPageRoute(builder: (context) => TravelTipsScreen()),
               );
             },
           ),
           ListTile(
-            title: Text('Local Advice'),
+            title: Text('local advice (English)'),
             onTap: () {
               Navigator.push(
                 context,
@@ -37,12 +38,38 @@ class TipsAndAdviceScreen extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            title: Text('Travel Tips (Malay)'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TravelTipsScreenMalay()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('local advice (Malay)'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LocalAdviceScreenMalay()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Promotion'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PromotionScreen()),
+              );
+            },
+          ),
         ],
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
-        currentIndex: 2, // Set the appropriate index for the TipsAndAdviceScreen
+        currentIndex: 2,
         onTap: (index) {
-          // Handle navigation based on the index
           switch (index) {
             case 0:
               Navigator.of(context).pushReplacement(

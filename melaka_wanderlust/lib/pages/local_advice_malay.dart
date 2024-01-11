@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class LocalAdviceScreen extends StatelessWidget {
+class LocalAdviceScreenMalay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Local Advice'),
+        title: Text('Local Advice (Malay)'),
         backgroundColor: Colors.orange,
       ),
       body: SingleChildScrollView(
@@ -15,47 +15,32 @@ class LocalAdviceScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SectionTitle(   'Explore Local Cuisine'  , textColor: Colors.indigo),
+            SectionTitle('Teroka Makanan Tempatan', textColor: Colors.indigo),
             AdviceItemWithVideo(
-              tip: '1. Try local dishes and street food to experience the authentic flavors.',
-              videoUrl: 'https://www.youtube.com/watch?v=jb8rnpFgfCU',
+              tip: '1. TEMPAT MAKAN BEST DI MELAKA | BREAKFAST, LUNCH, DINNER BEST DI MELAKA.',
+              videoUrl: 'https://www.youtube.com/watch?v=VYp70hTd1cs',
               textColor: Colors.black,
+              videoKey: ValueKey('unique_key_1'),  // Unique key for the first video
+            ),
+            AdviceItemWithVideo(
+              tip: '2. Top10 Tempat Makan Best di MELAKA.',
+              videoUrl: 'https://www.youtube.com/watch?v=GApa9uM6Xtk',
+              textColor: Colors.black,
+              videoKey: ValueKey('unique_key_2'),  // Unique key for the second video
             ),
 
-        AdviceItemWithVideo(
-          tip: '2. visit local markets for fresh produce and unique snacks.',
-          videoUrl: 'https://www.youtube.com/watch?v=RHRFEUDEaos&t=85s ',
-          textColor: Colors.black,
-        ),
-
-
-            SectionTitle(    'Connect with Locals'   , textColor: Colors.indigo),
-
+            SectionTitle('Adat-adat dan Sejarah di Melaka', textColor: Colors.indigo),
             AdviceItemWithVideo(
-              tip: '1. Attend local events and festivals to engage with the community.',
-              videoUrl: 'https://www.youtube.com/watch?v=GF2vM0GNGus ',
+              tip: '1. Sejarah Adat Budaya & Penggunaan Bahasa Melayu Melaka di Perairan Asia Tenggara.',
+              videoUrl: 'https://www.youtube.com/watch?v=-juGE3axBCM',
               textColor: Colors.black,
+              videoKey: ValueKey('unique_key_3'),  // Unique key for the third video
             ),
-
             AdviceItemWithVideo(
-              tip: '2. Learn a few basic phrases in the local language to communicate with locals.',
-              videoUrl: 'https://www.youtube.com/watch?v=UL0AQseo3fs  ',
+              tip: '2. Macam mana ada etnik PORTUGIS di Melaka?.',
+              videoUrl: 'https://www.youtube.com/watch?v=BufRD2Eb6kM',
               textColor: Colors.black,
-            ),
-
-
-
-            SectionTitle(    'Respect Local Customs' , textColor: Colors.indigo),
-            AdviceItemWithVideo(
-              tip: '1. Research and respect local customs and traditions.',
-              videoUrl: 'https://www.youtube.com/watch?v=8xOMufq0Wys ',
-              textColor: Colors.black,
-            ),
-
-            AdviceItemWithVideo(
-              tip: '2. Be aware of and follow local etiquette to show respect for the community.',
-              videoUrl: 'https://www.youtube.com/watch?v=_Fr2in5LuY8  ',
-              textColor: Colors.black,
+              videoKey: ValueKey('unique_key_4'),  // Unique key for the fourth video
             ),
           ],
         ),
@@ -82,34 +67,20 @@ class SectionTitle extends StatelessWidget {
   }
 }
 
-class AdviceItem extends StatelessWidget {
-  final String advice;
-  final Color textColor;
-
-  AdviceItem(this.advice, {this.textColor = Colors.black});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 4.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(Icons.check, size: 20.0, color: Colors.yellow[900]),
-          SizedBox(width: 8.0),
-          Expanded(child: Text(advice, style: TextStyle(color: textColor))),
-        ],
-      ),
-    );
-  }
-}
-
 class AdviceItemWithVideo extends StatelessWidget {
   final String tip;
   final String videoUrl;
   final Color textColor;
 
-  AdviceItemWithVideo({required this.tip, required this.videoUrl, this.textColor = Colors.black});
+  // Add a unique key for each AdviceItemWithVideo
+  final Key videoKey;
+
+  AdviceItemWithVideo({
+    required this.tip,
+    required this.videoUrl,
+    this.textColor = Colors.black,
+    required this.videoKey,  // Pass the key as a parameter
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -119,6 +90,7 @@ class AdviceItemWithVideo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           YoutubePlayer(
+            key: videoKey,  // Assign the key to the YoutubePlayer
             controller: YoutubePlayerController(
               initialVideoId: YoutubePlayer.convertUrlToId(videoUrl) ?? '',
               flags: YoutubePlayerFlags(autoPlay: false, mute: false),
