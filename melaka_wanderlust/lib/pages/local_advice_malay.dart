@@ -7,7 +7,24 @@ class LocalAdviceScreenMalay extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Local Advice (Malay)'),
+        title: Row(
+          children: [
+            Container(
+              padding: EdgeInsets.all(8.0),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.orange,
+              ),
+              child: Icon(
+                Icons.lightbulb_outline,
+                color: Colors.white,
+                size: 24.0,
+              ),
+            ),
+            SizedBox(width: 8.0),
+            Text('Travel Tips'),
+          ],
+        ),
         backgroundColor: Colors.orange,
       ),
       body: SingleChildScrollView(

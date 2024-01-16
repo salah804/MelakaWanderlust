@@ -1,4 +1,4 @@
-// TipsAndAdviceScreen.dart
+import 'dart:ui'; // Import dart:ui
 import 'package:flutter/material.dart';
 import 'package:melaka_wanderlust/pages/local_advice.dart';
 import 'package:melaka_wanderlust/pages/local_advice_malay.dart';
@@ -15,13 +15,15 @@ class TipsAndAdviceScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Tips and advice '),
+        title: Text('Tips and Advice '),
         backgroundColor: Colors.orange,
       ),
       body: Column(
         children: [
-          ListTile(
-            title: Text('Travel Tips (English)'),
+          CustomListTile(
+            title: 'Travel Tips (English)',
+            customIcon: 'assets/travel-tips.png',
+            iconColor: Colors.blue,
             onTap: () {
               Navigator.push(
                 context,
@@ -29,8 +31,10 @@ class TipsAndAdviceScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            title: Text('local advice (English)'),
+          CustomListTile(
+            title: 'Local Advice (English)',
+            customIcon: 'assets/local.jpg', // Update with your image path
+            iconColor: Colors.yellow,
             onTap: () {
               Navigator.push(
                 context,
@@ -38,8 +42,10 @@ class TipsAndAdviceScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            title: Text('Travel Tips (Malay)'),
+          CustomListTile(
+            title: 'Travel Tips (Malay)',
+            customIcon: 'assets/travel-tips.png',
+            iconColor: Colors.blue,
             onTap: () {
               Navigator.push(
                 context,
@@ -47,8 +53,10 @@ class TipsAndAdviceScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            title: Text('local advice (Malay)'),
+          CustomListTile(
+            title: 'Local Advice (Malay)',
+            customIcon: 'assets/local.jpg', // Update with your image path
+            iconColor: Colors.yellow,
             onTap: () {
               Navigator.push(
                 context,
@@ -56,8 +64,10 @@ class TipsAndAdviceScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            title: Text('Promotion'),
+          CustomListTile(
+            title: 'Promotion',
+            customIcon: 'assets/promo.jpg',
+            iconColor: Colors.red,
             onTap: () {
               Navigator.push(
                 context,
@@ -92,6 +102,35 @@ class TipsAndAdviceScreen extends StatelessWidget {
           }
         },
       ),
+    );
+  }
+}
+
+class CustomListTile extends StatelessWidget {
+  final String title;
+  final String? customIcon;
+  final Color iconColor;
+  final VoidCallback onTap;
+
+  const CustomListTile({
+    required this.title,
+    this.customIcon,
+    required this.iconColor,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(title),
+      contentPadding: EdgeInsets.only(left: 16.0, right: 16.0),
+      leading: customIcon != null
+          ? Padding(
+        padding: EdgeInsets.only(right: 8.0),
+        child: Image.asset(customIcon!, width: 40, height: 40),
+      )
+          : Icon(Icons.error, color: Colors.red),
+      onTap: onTap,
     );
   }
 }

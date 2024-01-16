@@ -86,42 +86,17 @@ flutter:
    - lib/images/historicals/
    - lib/images/attractions/
    - lib/images/restaurants/
-   - assets/jan1.png
-   - assets/jan2.png
-   - assets/feb1.png
-   - assets/feb2png.png
-   - assets/feb3.png
-   - assets/feb4.png
-   - assets/feb5.png
-   - assets/feb6png.png
-   - assets/Apr1.png
-   - assets/Apr2.png
-   - assets/may1.png
-   - assets/may2.png
-   - assets/jun1.png
-   - assets/jun2.png
-   - assets/jun3.png
-   - assets/jul1.png
-   - assets/jul2.png
-   - assets/jul3.png
-   - assets/jul4.png
-   - assets/aug1.png
-   - assets/aug2.png
-   - assets/aug3.png
-   - assets/sep1.png
-   - assets/sep2.png
-   - assets/oct1.png
-   - assets/oct2.png
-   - assets/nov1.png
-   - assets/nov2.png
-   - assets/dec1.png
-   - assets/dec2.png
+   - lib/images/promotions/
+   - assets/travel-tips.png
+   - assets/local.jpg
+   - assets/promo.jpg
 
 
 
 
 
-     #   - images/a_dot_ham.jpeg
+
+    #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

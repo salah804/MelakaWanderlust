@@ -29,18 +29,19 @@ class PromotionScreen extends StatelessWidget {
 }
 
 class EventPages extends StatelessWidget {
+
   static final List<MonthEvents> months = [
     MonthEvents(
       month: 'January',
       events: [
         EventItem(
-          imageName: 'jan1.png',
+          imageName: 'jan111.png',
           eventName: 'Event 1',
           eventDate: '2-7 January 2024',
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
         ),
         EventItem(
-          imageName: 'jan2.png',
+          imageName: 'jan11.png',
           eventName: 'Event 2',
           eventDate: '8-11 January 2024',
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
@@ -57,7 +58,7 @@ class EventPages extends StatelessWidget {
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
         ),
         EventItem(
-          imageName: 'feb2png.png',
+          imageName: 'feb2.png',
           eventName: 'Event 2',
           eventDate: '27Feb - 3 Mac 2024',
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
@@ -81,7 +82,7 @@ class EventPages extends StatelessWidget {
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
         ),
         EventItem(
-          imageName: 'feb6png.png',
+          imageName: 'feb6.png',
           eventName: 'Event 6',
           eventDate: '25 February 2024',
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
@@ -93,13 +94,13 @@ class EventPages extends StatelessWidget {
       month: 'April',
       events: [
         EventItem(
-          imageName: 'Apr1.png',
+          imageName: 'apr1.png',
           eventName: 'Event 1',
           eventDate: '13 April 2024',
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
         ),
         EventItem(
-          imageName: 'Apr2.png',
+          imageName: 'apr2.png',
           eventName: 'Event 2',
           eventDate: '22-28 April 2024',
           eventLink: 'https://www.visitmelaka.com.my/index.php/download/calendar-of-events',
@@ -298,7 +299,9 @@ class MonthEvents extends StatelessWidget {
         children: [
           Text(
             month,
-            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 8.0),
           Column(
@@ -333,7 +336,7 @@ class EventItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
-            'assets/$imageName',
+            'lib/images/promotions/$imageName',
             height: 100,
             width: 500,
             fit: BoxFit.fill,
@@ -345,7 +348,9 @@ class EventItem extends StatelessWidget {
               children: [
                 Text(
                   eventName,
-                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 8.0),
                 Text(
@@ -368,6 +373,9 @@ class EventItem extends StatelessWidget {
                       );
                     }
                   },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.orange,
+                  ),
                   child: Text('View more Details'),
                 ),
               ],
